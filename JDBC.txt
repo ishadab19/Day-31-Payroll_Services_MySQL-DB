@@ -1,1 +1,40 @@
-											-----------welcome to JDBC --------------
+mysql> show databases;       //command to see list of databases.
++--------------------+
+| Database           |
++--------------------+
+| emplooyedb         |
+| information_schema |
+| mysql              |
+| performance_schema |
+| person             |
+| sys                |
++--------------------+
+6 rows in set (0.01 sec)
+
+mysql> create database payroll_service;  //command for creating new database.
+Query OK, 1 row affected (0.05 sec)
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| emplooyedb         |
+| information_schema |
+| mysql              |
+| payroll_service    |
+| performance_schema |
+| person             |
+| sys                |
++--------------------+
+7 rows in set (0.00 sec)
+
+mysql> use payroll_service;  //command for entering data base that you have created
+Database changed
+mysql> select database();
++-----------------+
+| database()      |
++-----------------+
+| payroll_service |
++-----------------+
+1 row in set (0.00 sec)
+
