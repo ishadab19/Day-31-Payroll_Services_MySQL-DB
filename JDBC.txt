@@ -1,32 +1,9 @@
 
-mysql> use payroll_service;    	//entering into database payroll_service.. 
-Database changed
-mysql> select database();
-+-----------------+
-| database()      |
-+-----------------+
-| payroll_service |
-+-----------------+
-1 row in set (0.00 sec)
-
-mysql> create table employee_payroll(  // creating table employee_payroll..
-    -> id int not null auto_increment,
-    -> name varchar(30) not null,
-    -> salary double not null,
-    -> startdate date not null,
-    -> primary key (id)
-    -> );
-Query OK, 0 rows affected (0.08 sec)
-
-mysql> desc employee_payroll;
-+-----------+-------------+------+-----+---------+----------------+
-| Field     | Type        | Null | Key | Default | Extra          |
-+-----------+-------------+------+-----+---------+----------------+
-| id        | int         | NO   | PRI | NULL    | auto_increment |
-| name      | varchar(30) | NO   |     | NULL    |                |
-| salary    | double      | NO   |     | NULL    |                |
-| startdate | date        | NO   |     | NULL    |                |
-+-----------+-------------+------+-----+---------+----------------+
-4 rows in set (0.04 sec)
+mysql> insert into employee_payroll(name,salary,startdate)  //inserting values table
+    -> values('Tony',250000.45,'2015-01-01'),
+    -> ('Stark',500000.25,'2016-02-02'),
+    -> ('Jarvis',100000.76,'2017-03-03');
+Query OK, 3 rows affected (0.05 sec)
+Records: 3  Duplicates: 0  Warnings: 0
 
 
