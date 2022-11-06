@@ -1,5 +1,14 @@
+mysql> select salary from employee_payroll where name = 'Tony';
++-----------+
+| salary    |
++-----------+
+| 250000.45 |
++-----------+
+1 row in set (0.00 sec)
 
-mysql> select * from employee_payroll;   //command for view data in table
+mysql> select * from employee_payroll
+    -> where startdate between cast('2015-01-01' as date)    //Use of Database Functions like CAST() and NOW() in the query.
+    -> and date(now());
 +----+--------+-----------+------------+
 | id | name   | salary    | startdate  |
 +----+--------+-----------+------------+
@@ -8,5 +17,4 @@ mysql> select * from employee_payroll;   //command for view data in table
 |  3 | Jarvis | 100000.76 | 2017-03-03 |
 +----+--------+-----------+------------+
 3 rows in set (0.00 sec)
-
 
